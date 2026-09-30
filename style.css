@@ -1,0 +1,551 @@
+
+:root {
+    --teal: #028090;
+    --mint: #02C39A;
+    --dark: #0B3D3E;
+    --light-bg: #F3FBFA;
+    --border: #BFE3DE;
+}
+
+nav.top-nav {
+    background: var(--dark);
+    padding: 0 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav.top-nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav.top-nav li a {
+    color: #cceee8;
+    font-size: 0.9rem;
+    padding: 1rem 0.75rem;
+    display: block;
+    text-decoration: none;
+}
+
+nav.top-nav li a:hover {
+    color: var(--mint);
+}
+
+nav.top-nav .brand {
+    color: white;
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    padding: 1rem 0;
+}
+
+nav.top-nav .nav-right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+nav.top-nav .btn-login {
+    background: transparent;
+    border: 1.5px solid var(--mint);
+    color: var(--mint);
+    border-radius: 6px;
+    padding: 0.35rem 1rem;
+    font-size: 0.85rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+nav.top-nav .btn-login:hover {
+    background: var(--mint);
+    color: white;
+}
+
+nav.top-nav .btn-start {
+    background: var(--mint);
+    border: none;
+    color: white;
+    border-radius: 6px;
+    padding: 0.35rem 1rem;
+    font-size: 0.85rem;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav.top-nav .btn-start:hover {
+    background: var(--teal);
+}
+
+.hero {
+    background: linear-gradient(135deg, var(--dark), #0e5e62);
+    color: white;
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.hero h1 {
+    color: white;
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero p {
+    color: #b0ddd8;
+    font-size: 1.1rem;
+    max-width: 540px;
+    margin: 0 auto 2rem;
+}
+
+.hero-search {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.hero-search input {
+    flex: 1;
+    border: none;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    outline: none;
+    border-radius: 0;
+    margin: 0;
+}
+
+.hero-search button {
+    background: var(--mint);
+    border: none;
+    color: white;
+    padding: 0 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 0;
+    margin: 0;
+}
+
+.hero-search button:hover {
+    background: var(--teal);
+}
+
+section {
+    padding: 3.5rem 1rem;
+}
+
+section:nth-child(even) {
+    background: var(--light-bg);
+}
+
+.section-title {
+    text-align: center;
+    color: var(--dark);
+    margin-bottom: 2rem;
+}
+
+.section-title span {
+    color: var(--teal);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+.stat-card {
+    background: white;
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+    padding: 1.5rem 1rem;
+    text-align: center;
+}
+
+.stat-card .num {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--teal);
+}
+
+.stat-card .lbl {
+    font-size: 0.85rem;
+    color: #5C7A7A;
+    margin-top: 0.25rem;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.feat-card {
+    background: white;
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+
+.feat-icon {
+    width: 44px;
+    height: 44px;
+    background: var(--light-bg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+    border: 1.5px solid var(--border);
+}
+
+.feat-card h4 {
+    color: var(--dark);
+    margin: 0 0 0.4rem;
+    font-size: 1rem;
+}
+
+.feat-card p {
+    color: #5C7A7A;
+    font-size: 0.88rem;
+    margin: 0;
+}
+
+.steps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.step {
+    flex: 1;
+    min-width: 180px;
+    max-width: 210px;
+    background: white;
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+    padding: 1.5rem 1rem;
+    text-align: center;
+}
+
+.step-num {
+    width: 36px;
+    height: 36px;
+    background: var(--teal);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    margin: 0 auto 0.75rem;
+    font-size: 1rem;
+}
+
+.step h4 {
+    color: var(--dark);
+    font-size: 0.95rem;
+    margin: 0 0 0.3rem;
+}
+
+.step p {
+    color: #5C7A7A;
+    font-size: 0.82rem;
+    margin: 0;
+}
+
+.panels {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+@media (max-width: 640px) {
+    .panels {
+        grid-template-columns: 1fr;
+    }
+
+    nav.top-nav {
+        padding: 0 0.5rem;
+    }
+
+    nav.top-nav li a {
+        padding: 0.7rem 0.4rem;
+        font-size: 0.8rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
+
+.panel-card {
+    border-radius: 12px;
+    padding: 2rem;
+    color: white;
+}
+
+.panel-card.user-panel {
+    background: linear-gradient(135deg, var(--teal), #05a688);
+}
+
+.panel-card.pharmacy-panel {
+    background: linear-gradient(135deg, var(--dark), #0e5e62);
+}
+
+.panel-card h3 {
+    color: white;
+    margin: 0 0 1rem;
+}
+
+.panel-card ul {
+    padding-left: 1.2rem;
+    margin: 0;
+}
+
+.panel-card ul li {
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+    color: #d0f0ec;
+}
+
+.panel-card .panel-btn {
+    display: inline-block;
+    margin-top: 1.2rem;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1.5px solid rgba(255, 255, 255, 0.5);
+    color: white;
+    border-radius: 6px;
+    padding: 0.4rem 1.2rem;
+    font-size: 0.85rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.panel-card .panel-btn:hover {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.cta {
+    background: var(--teal);
+    color: white;
+    text-align: center;
+    padding: 3.5rem 1rem;
+}
+
+.cta h2 {
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.cta p {
+    color: #cceee8;
+    margin-bottom: 1.5rem;
+}
+
+.cta-btns {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-btns a {
+    padding: 0.65rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.cta-btns .primary {
+    background: white;
+    color: var(--teal);
+}
+
+.cta-btns .secondary {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.cta-btns a:hover {
+    opacity: 0.88;
+}
+
+footer {
+    background: var(--dark);
+    color: #8bbcb8;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.85rem;
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal {
+    background: white;
+    border-radius: 14px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+    margin: 1rem;
+}
+
+.modal h3 {
+    color: var(--dark);
+    margin: 0 0 1.2rem;
+    text-align: center;
+}
+
+.modal .tabs {
+    display: flex;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1.5px solid var(--border);
+}
+
+.modal .tab {
+    flex: 1;
+    text-align: center;
+    padding: 0.5rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: #5C7A7A;
+    background: var(--light-bg);
+}
+
+.modal .tab.active {
+    background: var(--teal);
+    color: white;
+    font-weight: 600;
+}
+
+.modal input,
+.modal select {
+    width: 100%;
+    margin-bottom: 0.85rem;
+    padding: 0.65rem 0.9rem;
+    border: 1.5px solid var(--border);
+    border-radius: 7px;
+    font-size: 0.9rem;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.modal input:focus {
+    border-color: var(--teal);
+}
+
+.modal .submit-btn {
+    width: 100%;
+    background: var(--teal);
+    color: white;
+    border: none;
+    border-radius: 7px;
+    padding: 0.7rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 0.25rem;
+}
+
+.modal .submit-btn:hover {
+    background: var(--dark);
+}
+
+.modal .close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: #888;
+}
+
+.modal-inner {
+    position: relative;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.forgot {
+    text-align: right;
+    font-size: 0.8rem;
+    color: var(--teal);
+    cursor: pointer;
+    margin-top: -0.6rem;
+    margin-bottom: 0.8rem;
+}
+
+.divider {
+    text-align: center;
+    color: #aaa;
+    font-size: 0.82rem;
+    margin: 0.8rem 0;
+}
+
+.role-select {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.85rem;
+}
+
+.role-btn {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1.5px solid var(--border);
+    border-radius: 7px;
+    background: var(--light-bg);
+    font-size: 0.85rem;
+    cursor: pointer;
+    text-align: center;
+    color: #5C7A7A;
+}
+
+.role-btn.active {
+    border-color: var(--teal);
+    background: #e6f7f5;
+    color: var(--teal);
+    font-weight: 600;
+}
+
+#pharmacy-extra {
+    display: none;
+}

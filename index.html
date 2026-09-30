@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediFind - Medicine Locator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="top-nav">
+    <div class="container">
+        <ul>
+            <li><span class="brand">MediFind</span></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#how-it-works">How it Works</a></li>
+            <li><a href="#panels">Panels</a></li>
+            <li><a href="#about">About</a></li>
+            <li class="nav-right">
+                <a class="btn-login" onclick="openModal('login')">Login</a>
+                <a class="btn-start" onclick="openModal('register')">Get Started</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="hero">
+    <h1>Find Medicine. Fast.</h1>
+    <p>Search real-time stock across nearby pharmacies and order from home - all in one place.</p>
+    <div class="hero-search">
+        <input type="text" placeholder="Search medicine name e.g. Napa, Azithromycin...">
+        <button>Search</button>
+    </div>
+</div>
+
+<section id="about">
+    <div class="container">
+        <h2 class="section-title">Trusted by <span>Patients & Pharmacies</span></h2>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="num">500+</div>
+                <div class="lbl">Registered Pharmacies</div>
+            </div>
+            <div class="stat-card">
+                <div class="num">10,000+</div>
+                <div class="lbl">Active Users</div>
+            </div>
+            <div class="stat-card">
+                <div class="num">50,000+</div>
+                <div class="lbl">Medicines Listed</div>
+            </div>
+            <div class="stat-card">
+                <div class="num">98%</div>
+                <div class="lbl">Order Success Rate</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="features">
+    <div class="container">
+        <h2 class="section-title">Why <span>MediFind?</span></h2>
+        <div class="features-grid">
+            <div class="feat-card">
+                <div class="feat-icon">+</div>
+                <h4>Real-time Stock Search</h4>
+                <p>Search any medicine by name or generic name and see which nearby pharmacies have it right now.</p>
+            </div>
+            <div class="feat-card">
+                <div class="feat-icon">P</div>
+                <h4>Nearby Pharmacy Map</h4>
+                <p>Find pharmacies on a map sorted by distance from your location with live availability.</p>
+            </div>
+            <div class="feat-card">
+                <div class="feat-icon">$</div>
+                <h4>Price Comparison</h4>
+                <p>Compare prices of the same medicine across multiple pharmacies and choose the best deal.</p>
+            </div>
+            <div class="feat-card">
+                <div class="feat-icon">C</div>
+                <h4>Home Delivery</h4>
+                <p>Order medicine from your nearest pharmacy and get it delivered to your doorstep.</p>
+            </div>
+            <div class="feat-card">
+                <div class="feat-icon">R</div>
+                <h4>Prescription Upload</h4>
+                <p>Upload your doctor's prescription and the pharmacy verifies it before dispensing medicine.</p>
+            </div>
+            <div class="feat-card">
+                <div class="feat-icon">O</div>
+                <h4>Order Tracking</h4>
+                <p>Track your order status in real-time from confirmation to delivery at your door.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="how-it-works">
+    <div class="container">
+        <h2 class="section-title">How it <span>Works</span></h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-num">1</div>
+                <h4>Create Account</h4>
+                <p>Register as a User or Pharmacy in under a minute.</p>
+            </div>
+            <div class="step">
+                <div class="step-num">2</div>
+                <h4>Search Medicine</h4>
+                <p>Type the medicine name and see real-time stock near you.</p>
+            </div>
+            <div class="step">
+                <div class="step-num">3</div>
+                <h4>Place Order</h4>
+                <p>Add to cart, upload prescription if needed, and checkout.</p>
+            </div>
+            <div class="step">
+                <div class="step-num">4</div>
+                <h4>Get Delivered</h4>
+                <p>Pharmacy confirms and delivers medicine to your home.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="panels">
+    <div class="container">
+        <h2 class="section-title">Two Panels. <span>One Platform.</span></h2>
+        <div class="panels">
+            <div class="panel-card user-panel">
+                <h3>User Panel</h3>
+                <ul>
+                    <li>Search medicine by name or generic</li>
+                    <li>View nearby pharmacy stock and price</li>
+                    <li>Upload prescription for verification</li>
+                    <li>Place order and track delivery status</li>
+                    <li>View order history anytime</li>
+                    <li>Save favourite pharmacies</li>
+                </ul>
+                <a class="panel-btn" onclick="openModal('register')">Register as User</a>
+            </div>
+            <div class="panel-card pharmacy-panel">
+                <h3>Pharmacy Panel</h3>
+                <ul>
+                    <li>Manage medicine stock and pricing</li>
+                    <li>Get low-stock and expiry date alerts</li>
+                    <li>Accept or reject incoming orders</li>
+                    <li>Verify prescription before dispensing</li>
+                    <li>Track daily and weekly sales reports</li>
+                    <li>Update delivery status in real-time</li>
+                </ul>
+                <a class="panel-btn" onclick="openModal('register')">Register Pharmacy</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="cta">
+    <h2>Ready to find your medicine?</h2>
+    <p>Join thousands of users and pharmacies already using MediFind.</p>
+    <div class="cta-btns">
+        <a class="primary" onclick="openModal('register')">Get Started Free</a>
+        <a class="secondary" onclick="openModal('login')">Login to Account</a>
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 MediFind - Medicine Locator & Pharmacy Management System</p>
+    <p>Developed by Aminul Islam Tayef | CSE-338 | Sylhet International University</p>
+</footer>
+
+<div class="modal-overlay" id="modal">
+    <div class="modal">
+        <div class="modal-inner">
+            <button class="close-btn" onclick="closeModal()">×</button>
+            <h3>MediFind</h3>
+
+            <div class="tabs">
+                <div class="tab active" id="tab-login" onclick="switchTab('login')">Login</div>
+                <div class="tab" id="tab-register" onclick="switchTab('register')">Register</div>
+            </div>
+
+            <div class="tab-content active" id="content-login">
+                <input type="email" placeholder="Email address">
+                <input type="password" placeholder="Password">
+                <div class="forgot">Forgot password?</div>
+                <button class="submit-btn">Login</button>
+            </div>
+
+            <div class="tab-content" id="content-register">
+                <div class="role-select">
+                    <div class="role-btn active" id="role-user" onclick="setRole('user')">User</div>
+                    <div class="role-btn" id="role-pharmacy" onclick="setRole('pharmacy')">Pharmacy</div>
+                </div>
+
+                <input type="text" placeholder="Full Name" id="reg-name">
+                <input type="email" placeholder="Email Address">
+                <input type="tel" placeholder="Phone Number">
+                <input type="password" placeholder="Password">
+
+                <div id="pharmacy-extra">
+                    <input type="text" placeholder="Pharmacy Name">
+                    <input type="text" placeholder="License Number">
+                    <input type="text" placeholder="Pharmacy Address">
+                </div>
+
+                <button class="submit-btn">Create Account</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
