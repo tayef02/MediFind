@@ -1,188 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>MediFind</title>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MediFind - Find medicine in Sylhet</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/landing.css">
 </head>
-<body>
+<body class="landing">
 
-<header class="nav">
-  <div class="wrap">
-    <div class="logo">
-      <svg width="24" height="24" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#0F7B5F"/><path d="M10.5 6h5v4.5H20v5h-4.5V20h-5v-4.5H6v-5h4.5z" fill="#fff"/></svg>
-      MediFind
-    </div>
-    <nav class="nav-links">
-      <a href="#features">Features</a>
-      <a href="#how-it-works">How it Works</a>
-      <a href="#panels">Panels</a>
-      <a href="#about">About</a>
-    </nav>
-    <div class="nav-right">
-      <button class="btn btn-plain" onclick="openModal('login')">Login</button>
-      <button class="btn btn-green" onclick="openModal('register')">Get Started</button>
-    </div>
-  </div>
-</header>
-
-<div class="hero">
-  <div class="wrap">
-    <h1>Find your medicine nearby.</h1>
-    <p>See which pharmacy has it in stock and order from home.</p>
-    <div class="search">
-      <input type="text" placeholder="e.g. Napa, Azithromycin"/>
-      <button class="btn btn-green">Search</button>
-    </div>
-  </div>
-</div>
-
-<section id="about" class="alt">
-  <div class="wrap">
-    <h2 class="title">Used by patients and pharmacies</h2>
-    <div class="stats">
-      <div><div class="num">500+</div><div class="lbl">Pharmacies</div></div>
-      <div><div class="num">10,000+</div><div class="lbl">Users</div></div>
-      <div><div class="num">50,000+</div><div class="lbl">Medicines</div></div>
-      <div><div class="num">98%</div><div class="lbl">Orders delivered</div></div>
-    </div>
-  </div>
-</section>
-
-<section id="features">
-  <div class="wrap">
-    <h2 class="title">What you get</h2>
-    <div class="features">
-      <div class="feature">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
-        <h3>Stock search</h3>
-        <p>See which shops have it right now.</p>
-      </div>
-      <div class="feature">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
-        <h3>Nearby map</h3>
-        <p>Closest pharmacies first.</p>
-      </div>
-      <div class="feature">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h10M4 17h6"/></svg>
-        <h3>Price compare</h3>
-        <p>Pick the shop with the best price.</p>
-      </div>
-      <div class="feature">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h11v10H3zM14 10h4l3 3v4h-7"/><circle cx="7" cy="18" r="1.8"/><circle cx="17" cy="18" r="1.8"/></svg>
-        <h3>Home delivery</h3>
-        <p>Get it at your door.</p>
-      </div>
-      <div class="feature">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/></svg>
-        <h3>Prescription upload</h3>
-        <p>Pharmacy checks it before sending.</p>
-      </div>
-      <div class="feature">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-        <h3>Order tracking</h3>
-        <p>Know where your order is.</p>
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a href="index.html" class="brand">MediFind</a>
+      <button class="menu-btn" id="menu-btn" aria-label="Menu">Menu</button>
+      <nav class="site-nav" id="site-nav">
+        <a href="#how">How it works</a>
+        <a href="#features">Features</a>
+        <a href="#pharmacy">For pharmacies</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="header-actions" id="header-actions">
+        <a href="login.html" class="btn btn-outline btn-sm">Login</a>
+        <a href="register.html" class="btn btn-primary btn-sm">Register</a>
       </div>
     </div>
-  </div>
-</section>
+  </header>
 
-<section id="how-it-works" class="alt">
-  <div class="wrap">
-    <h2 class="title">How it works</h2>
-    <div class="steps">
-      <div class="step"><div class="step-num">1</div><h3>Sign up</h3><p>As user or pharmacy.</p></div>
-      <div class="step"><div class="step-num">2</div><h3>Search</h3><p>Type the medicine name.</p></div>
-      <div class="step"><div class="step-num">3</div><h3>Order</h3><p>Add prescription if needed.</p></div>
-      <div class="step"><div class="step-num">4</div><h3>Receive</h3><p>Delivered to your home.</p></div>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Pharmacies of Sylhet in one place</p>
+        <h1>Find your medicine before you leave home</h1>
+        <p class="lead">Search any medicine by brand or generic name, see which pharmacy has it, compare prices and order for home delivery.</p>
+        <form class="hero-search" id="hero-search">
+          <input id="hero-q" placeholder="e.g. Napa, Seclo or Paracetamol" required minlength="2">
+          <button class="btn btn-primary" type="submit">Search</button>
+        </form>
+        <p class="hint">Popular: <a href="#" data-q="Napa">Napa</a>, <a href="#" data-q="Seclo">Seclo</a>, <a href="#" data-q="Fexo">Fexo</a>, <a href="#" data-q="Paracetamol">Paracetamol</a></p>
+      </div>
+      <div class="hero-card">
+        <div class="hc-head">
+          <strong>Napa 500mg</strong>
+          <span class="muted">Paracetamol</span>
+        </div>
+        <div class="hc-row">
+          <div><strong>Zindabazar Pharmacy</strong><small>Zindabazar, Sylhet</small></div>
+          <div class="hc-price">৳10.00 <small>/ strip</small></div>
+        </div>
+        <div class="hc-row">
+          <div><strong>Amberkhana Drug House</strong><small>Amberkhana, Sylhet</small></div>
+          <div class="hc-price">৳10.50 <small>/ strip</small></div>
+        </div>
+        <div class="hc-row">
+          <div><strong>Tilagor Medical Store</strong><small>Tilagor, Sylhet</small></div>
+          <div class="hc-price">৳11.00 <small>/ strip</small></div>
+        </div>
+        <p class="hc-note">Sample result</p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="panels">
-  <div class="wrap">
-    <h2 class="title">Two panels</h2>
-    <div class="panels">
-      <div class="panel">
-        <h3>User Panel</h3>
-        <ul>
-          <li>Search medicine</li>
-          <li>See stock and price</li>
-          <li>Upload prescription</li>
-          <li>Order and track delivery</li>
-          <li>Order history</li>
-          <li>Save favourite pharmacies</li>
+  <section class="stats-band">
+    <div class="wrap stats-row">
+      <div><strong>8+</strong><span>Pharmacies</span></div>
+      <div><strong>48+</strong><span>Medicines</span></div>
+      <div><strong>3</strong><span>Ways to buy: tablet, strip, box</span></div>
+      <div><strong>0</strong><span>Cost to join</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="how">
+    <div class="wrap">
+      <h2 class="section-head">How it works</h2>
+      <p class="section-sub">Three steps from search to delivery.</p>
+      <div class="steps">
+        <div class="step">
+          <span class="step-no">1</span>
+          <h3>Search</h3>
+          <p>Type the medicine name or its generic name. You will see every pharmacy that has it in stock.</p>
+        </div>
+        <div class="step">
+          <span class="step-no">2</span>
+          <h3>Compare</h3>
+          <p>Prices are shown side by side, the cheapest first. Pick how much you need: a few tablets, a strip or a full box.</p>
+        </div>
+        <div class="step">
+          <span class="step-no">3</span>
+          <h3>Order</h3>
+          <p>Add to cart, give your address and place the order. Follow its status from pending to delivered.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="features">
+    <div class="wrap">
+      <h2 class="section-head">For customers</h2>
+      <p class="section-sub">Less walking from shop to shop.</p>
+      <div class="feature-grid">
+        <div class="feature">
+          <h3>Search by generic name</h3>
+          <p>Don't know the brand? Search "Omeprazole" and see Seclo, Losectil and others together.</p>
+        </div>
+        <div class="feature">
+          <h3>Real stock</h3>
+          <p>Only medicines that are in stock and not expired are shown.</p>
+        </div>
+        <div class="feature">
+          <h3>Price comparison</h3>
+          <p>The same medicine from different pharmacies, sorted by price.</p>
+        </div>
+        <div class="feature">
+          <h3>Buy what you need</h3>
+          <p>Take 5 tablets, 2 strips or a full box. You choose.</p>
+        </div>
+        <div class="feature">
+          <h3>Order tracking</h3>
+          <p>See when the pharmacy confirms, rejects or delivers your order.</p>
+        </div>
+        <div class="feature">
+          <h3>Saved profile</h3>
+          <p>Your name, phone and address are filled in for every order.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="pharmacy">
+    <div class="wrap split">
+      <div>
+        <h2 class="section-head left">For pharmacies</h2>
+        <p class="section-sub left">Manage your shop from one dashboard and get orders from new customers.</p>
+        <ul class="check-list">
+          <li>Add, edit and remove medicines from stock</li>
+          <li>Red alert for low stock, yellow alert for medicines close to expiry</li>
+          <li>Buying price, selling price and profit calculated for you</li>
+          <li>Monthly sales and top selling medicines</li>
+          <li>Accept or reject orders and mark them delivered</li>
         </ul>
-        <button class="btn btn-green" onclick="openModal('register','user')">Register as User</button>
+        <a href="register.html?role=pharmacy" class="btn btn-primary">Register your pharmacy</a>
       </div>
-      <div class="panel dark">
-        <h3>Pharmacy Panel</h3>
-        <ul>
-          <li>Manage stock and price</li>
-          <li>Low stock and expiry alerts</li>
-          <li>Accept or reject orders</li>
-          <li>Verify prescriptions</li>
-          <li>Sales reports</li>
-          <li>Update delivery status</li>
-        </ul>
-        <button class="btn btn-green" onclick="openModal('register','pharmacy')">Register Pharmacy</button>
+      <div class="dash-preview">
+        <div class="dp-card"><span>Medicines in stock</span><strong>34</strong></div>
+        <div class="dp-card red"><span>Pending orders</span><strong>3</strong></div>
+        <div class="dp-card"><span>Sold this month</span><strong>৳12,450</strong></div>
+        <div class="dp-card"><span>Profit this month</span><strong>৳1,870</strong></div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="cta alt">
-  <div class="wrap">
-    <h2>Ready to find your medicine?</h2>
-    <p>It's free to join.</p>
-    <div class="btns">
-      <button class="btn btn-green" onclick="openModal('register')">Get Started</button>
-      <button class="btn btn-outline" onclick="openModal('login')">Login</button>
+  <section class="section alt" id="faq">
+    <div class="wrap narrow">
+      <h2 class="section-head">Frequently asked questions</h2>
+      <details>
+        <summary>Do I need an account to search?</summary>
+        <p>Yes. Create a free account with your name, phone and address. It takes a minute.</p>
+      </details>
+      <details>
+        <summary>Which areas are covered?</summary>
+        <p>Right now pharmacies inside Sylhet city: Zindabazar, Amberkhana, Bondor Bazar, Subidbazar, Tilagor, Uposhohor, Chowhatta and more.</p>
+      </details>
+      <details>
+        <summary>How do I pay?</summary>
+        <p>Pay the delivery person in cash when the medicine arrives.</p>
+      </details>
+      <details>
+        <summary>Can I buy medicine that needs a prescription?</summary>
+        <p>The pharmacy may ask to see the prescription at delivery and can reject the order without it.</p>
+      </details>
+      <details>
+        <summary>How can my pharmacy join?</summary>
+        <p>Register as a pharmacy with your shop name, license number and address, then add your stock.</p>
+      </details>
     </div>
-  </div>
-</section>
+  </section>
 
-<footer>
-  <p>© 2026 MediFind, Medicine Locator & Pharmacy Management System</p>
-</footer>
-
-<div class="modal-overlay" id="modal">
-  <div class="modal">
-    <button class="close-btn" onclick="closeModal()">✕</button>
-    <h3>MediFind</h3>
-    <div class="tabs">
-      <button class="tab active" id="tab-login" onclick="switchTab('login')">Login</button>
-      <button class="tab" id="tab-register" onclick="switchTab('register')">Register</button>
-    </div>
-
-    <div class="tab-content active" id="content-login">
-      <input type="email" placeholder="Email"/>
-      <input type="password" placeholder="Password"/>
-      <div class="forgot">Forgot password?</div>
-      <button class="btn btn-green submit-btn">Login</button>
-    </div>
-
-    <div class="tab-content" id="content-register">
-      <div class="role-select">
-        <button class="role-btn active" id="role-user" onclick="setRole('user')">User</button>
-        <button class="role-btn" id="role-pharmacy" onclick="setRole('pharmacy')">Pharmacy</button>
+  <section class="cta">
+    <div class="wrap cta-row">
+      <div>
+        <h2>Ready to find your medicine?</h2>
+        <p>Create a free account and search all pharmacies at once.</p>
       </div>
-      <input type="text" placeholder="Full Name" id="reg-name"/>
-      <input type="email" placeholder="Email"/>
-      <input type="tel" placeholder="Phone Number"/>
-      <input type="password" placeholder="Password"/>
-      <div id="pharmacy-extra" style="display:none">
-        <input type="text" placeholder="Pharmacy Name"/>
-        <input type="text" placeholder="License Number"/>
-        <input type="text" placeholder="Pharmacy Address"/>
-      </div>
-      <button class="btn btn-green submit-btn">Create Account</button>
+      <a href="register.html" class="btn btn-light">Create account</a>
     </div>
-  </div>
-</div>
+  </section>
 
-<script src="script.js"></script>
+  <footer class="site-footer" id="contact">
+    <div class="wrap footer-grid">
+      <div>
+        <a href="index.html" class="brand">MediFind</a>
+        <p>Medicine search and ordering for the pharmacies of Sylhet.</p>
+      </div>
+      <div>
+        <h4>Links</h4>
+        <a href="#how">How it works</a>
+        <a href="#features">Features</a>
+        <a href="#pharmacy">For pharmacies</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div>
+        <h4>Account</h4>
+        <a href="login.html">Login</a>
+        <a href="register.html">Register as user</a>
+        <a href="register.html?role=pharmacy">Register as pharmacy</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>Zindabazar, Sylhet 3100</p>
+        <p>01700-000000</p>
+        <p>support@medifind.example</p>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <span>&copy; <span id="year">2026</span> MediFind</span>
+      <span>Not a replacement for advice from your doctor.</span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/index.js"></script>
 </body>
 </html>
